@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 操作员分页查询 -->
+    <item name="merchantList">
+        <param name="includeProperties">
+            merchants\[\d+\]\.\w+,
+            merchants\[\d+\]\.dataStatus,
+            merchants\[\d+\]\.dataStatus\.desc,
+            merchants\[\d+\]\.dataStatus\.value,
+            merchants\[\d+\]\.industryTypes,
+            merchants\[\d+\]\.industryTypes\[\d+\]\.desc,
+            merchants\[\d+\]\.industryTypes\[\d+\]\.value,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+
+    <item name="merchant">
+        <param name="includeProperties">
+            \w+,
+            merchantIndustryTags\[\d+\]\.\w+,
+            merchantExtendInfo\.\w+,
+            dataStatus.\w+,
+            merchantImpressTags\[\d+\]\.tag\.\w+,
+        </param>
+        <param name="ignoreHierarchy">false</param>
+    </item>
+    
+     <!-- 操作员分页查询 -->
+    <item name="merchant_platform_list">
+        <param name="includeProperties">
+            merchants\[\d+\]\.id,
+            merchants\[\d+\]\.name,
+            merchants\[\d+\]\.address,
+            merchants\[\d+\]\.telephone,
+            merchants\[\d+\]\.openManagerPlatform,
+            merchants\[\d+\]\.firstOperatorLoginName,
+            merchants\[\d+\]\.firstOperatorName,
+            merchants\[\d+\]\.merchantBusinessConfigs,
+            merchants\[\d+\]\.merchantBusinessConfigs\[\d+\]\.businessConfig,
+            merchants\[\d+\]\.merchantBusinessConfigs\[\d+\]\.businessConfig\.id,
+            merchants\[\d+\]\.merchantBusinessConfigs\[\d+\]\.businessConfig\.name,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>

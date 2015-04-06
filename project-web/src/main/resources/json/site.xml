@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+	<item name="sites">
+		<param name="includeProperties">
+            sites\[\d+\]\.\w+,
+            sites\[\d+\]\.merchant\.industryType\.desc,
+            sites\[\d+\]\.merchant\.name,
+            sites\[\d+\]\.merchant\.id,
+            sites\[\d+\]\.template\.name,
+            sites\[\d+\]\.status\.desc,
+            sites\[\d+\]\.status\.value,
+
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+		</param>
+	</item>
+
+    <item name="site">
+        <param name="includeProperties">
+            \w+,
+            merchant\.name,
+            merchant\.id,
+            theme\.desc,
+            theme\.value,
+            template\.name,
+            template\.id,
+            status\.desc,
+            status\.value
+        </param>
+    </item>
+
+</json>

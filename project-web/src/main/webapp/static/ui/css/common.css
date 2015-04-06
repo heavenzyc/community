@@ -1,0 +1,263 @@
+@charset "utf-8";
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, code, del, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;}
+html { height : 101%;}
+body { font-size:12px;line-height:1; font-family:"Microsoft YaHei", Arial, Tahoma, sans-serif; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display : block; }
+ol, ul { list-style: none ; }
+blockquote, q { quotes: none ; }
+blockquote:before, blockquote:after, q:before , q:after { content: '' ; content : none; }
+strong { font-weight: bold;}
+table {border-collapse:collapse;border-spacing:0;width:100%; }
+img {border: 0;}
+p { font-size:1em;line-height:1.0em;color:#333;}
+a{text-decoration:none;font-size:12px;color:#333;}
+.red{color:#ff0000; }
+.Left{float:left; }
+.Right{float:right;}
+.mt10{margin-top:10px;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;overflow:hidden;}
+.clearfix{*zoom:1;}
+.none{display:none;}
+.w{width:1310px;margin:0px auto;}
+/*公用弹出窗口样式*/
+.lightBox{width:100%;position:fixed;top:100px;_position:absolute;_top:expression(eval(document.documentElement.scrollTop + 100));}
+.lightBox .in{background:#fff;margin:0px auto;border:1px solid #bbb;border-radius:2px;box-shadow:1px 1px 3px #bababa; }
+.lightBox .btns{text-align:center;border-top:1px solid #bbb;padding:10px 0;}
+.lightBox .btns button{padding:5px 15px;border:1px solid #ccc;border-radius:3px;background:#f4f4f4;color:#333;cursor:pointer;}
+.lightBox .btns button:hover{color:#000;background:#fff;}
+/*公用消息提示框样式*/
+.lightBox .lightop{text-align:right;border-bottom:1px solid #c2c2c3;padding:8px 0px;}
+.lightBox .lightop .close{color:#f00;font-weight: bold;margin-right:15px;}
+.lightBox .cenH{padding:0px 20px 20px;}
+.lightBox .cenH .tilt{color:#323232;font-size:16px;border-bottom:1px dotted #000;padding:10px 0px;height:20px;line-height:20px;}
+.lightBox .cenH .contips{font-size:14px;color:#000;padding:50px 0px;text-align:center;line-height:22px;}
+.lightBox .cenH .bottom{text-align:center;}
+.lightBox .cenH .bottom a{display:inline-block;width:85px;height:25px;line-height:25px;text-align:center;color:#fff;}
+.lightBox .cenH .bottom .sure{background:#00a332;margin-right:16px;  }
+.lightBox .cenH .bottom .cancel{background:#e02500;}
+/*主体*/
+.potion{padding:10px 15px;color:#323232;font-size:12px; }
+.potion i{background:url(/static/ui/img/houtai_img.png) no-repeat;display:inline-block;vertical-align:middle;margin-right:5px;}
+.potion .smile{background-position:-20px 0px;width:13px;height:13px;}
+.potion .gps{background-position:-34px 0px;width:11px;height:15px;margin-left:25px;}
+.hidmenu{width:14px;float:left;padding-left:2px;}
+.hidmenu .hidbtn{background:url(/static/ui/img/houtai_img.png) 0px -17px no-repeat;display:inline-block;width:14px;height:65px;    }
+.menu{float:left;width:163px;margin-left:1px;}
+.menu .items{width:163px;margin-bottom:1px;}
+.menu .items .option{display:inline-block;width:148px;height:22px;background:#a1dcf5;color:#393d3e;padding:5px 0px 5px 15px;line-height:22px;font-size:12px; }
+.menu .items .point{color:#0073af;width:10px;visibility:hidden;text-align:center;display:inline-block;}
+.menu .items:hover .point,.menu .current .point{visibility:visible;}
+.menu .items ul{display:none;}
+.menu .current ul{display:block;}
+.menu .items li{background:#fff;height:32px;line-height:32px;margin-bottom:2px;padding-left:45px;  }
+.menu .items li a{color:#323232;font-size:12px;}
+.menu .items li:hover,.menu .items .current{background:url(/static/ui/img/houtai_img.png) 0px -82px no-repeat;height:32px;}
+.conten{float:right;width:1100px;padding-top:30px; }
+.conten .itembox{width:195px;border-radius:5px;background:#fff;display:inline-block;padding:15px;margin-right:30px;box-shadow:1px 1px 3px #b9b9b6;}
+.conten .ideabox{margin:0px;}
+.conten .itembox:hover{background:#e6f8ff;}
+.conten .itembox .item_n{background:url(/static/ui/img/houtai_img.png) -272px 0px no-repeat;height:40px;padding-left:50px;font-size:18px;color:#00a0e3;line-height:38px; }
+.conten .itembox .que_aws{background-position:-257px -39px; }
+.conten .itembox .comm{background-position:-255px -75px; }
+.conten .itembox .idea{background-position:-255px -115px; }
+.conten .itembox table{width:100%;margin-top:15px;}
+.conten .itembox table td{color:#000;width:50%;height:20px;line-height:20px;}
+.conten .itembox table td .org{color:#fe9518;}
+/*待发布楼盘页面*/
+.mbody .con_title{background:#00b6fb;font-size:13px;line-height:20px;color:#fff;}
+.mbody .con_title .tleft{display:inline-block;height:18px;padding:7px 0px 7px 10px;font-weight:bold;float:left; }
+.mbody .con_title .tleft .licon{background:url(/static/ui/img/houtai_img.png) -48px 0px no-repeat;display:inline-block;width:16px;height:16px;vertical-align:top;margin:2px 10px 0px 0px;}
+.mbody .con_title .newbud{width:100px;border-left:1px solid #fff;display:inline-block;text-align:center;height:18px;padding:7px 0px;color:#fff; }
+.mbody .con_title .tright{float:right;display:inline-block;}
+.mbody .con_title .tright .sechbox{background:#fff;width:160px;height:24px;display:inline-block;vertical-align:top;margin:4px 15px 4px 0px;}
+.mbody .con_title .tright .sechbox input{border:none;height:22px;line-height:22px;width:136px;vertical-align:top;*width:120px;*height:16px;*line-height:16px;}
+.mbody .con_title .tright .sechbox a{background:url(/static/ui/img/houtai_img.png) -76px 2px no-repeat;display:inline-block;width:19px;height:19px;border-left:1px dotted #00acf0;margin-top:2px; }
+.mbody .con_title .newbud i{background:url(/static/ui/img/houtai_img.png) -66px 0px no-repeat;display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:top;margin-top:3px; }
+.mbody .tabnav{border-bottom:1px solid #0094d4; }
+.mbody .tabnav .tab{padding:8px 10px;display:inline-block;background:#e3e3e0;color:#292929;font-size:14px;margin-right:2px;vertical-align:top; }
+.mbody .tabnav .tab:hover,.mbody .tabnav .current{background:#00aef0;color:#fff;padding-bottom:9px;    }
+.mbody .tablediv{padding-top:1px;}
+.mbody .tablediv thead{background:#9dcee3;}
+.mbody .tablediv th{padding:10px 0px 10px 15px;vertical-align:middle;border-right:1px solid #f3f3ef;text-align:left; }
+.mbody .tablediv td{padding:10px 0px 10px 15px;}
+.mbody .tablediv .odd_line td{background:#fff;}
+.mbody .tablediv td a{display:inline-block;text-align:center;padding:0px 10px; }
+.mbody .tablediv td .del{color:#f00;}
+
+/*合作楼盘设置账户弹窗*/
+.lightBox .jointop{text-align:right;border-bottom:1px solid #c2c2c3;padding:8px 0px;}
+.lightBox .jointop .close{color:#f00;font-weight: bold;margin-right:15px;}
+.lightBox .in_cont{padding:0px 20px 20px;}
+.lightBox .in_cont .in_top{padding:15px 0px;border-bottom:1px dotted #000;font-size:14px;color:#323232;    }
+.lightBox .in_cont .form{padding-top:10px;}
+.lightBox .in_cont .form p{padding:5px 0px; }
+.lightBox .in_cont .form p span{width:75px;display:inline-block;text-align:right;margin-right:8px;}
+.lightBox .in_cont .in_btm{padding-top:15px; }
+.lightBox .in_cont .in_btm a{display:inline-block;width:85px;height:25px;line-height:25px;text-align:center;color:#fff;}
+.lightBox .in_cont .in_btm .sure{background:#00a332;margin-right:16px;  }
+.lightBox .in_cont .in_btm .cancel{background:#e02500;}
+/*编辑楼盘概况*/
+.mbody .info_form{padding:32px;background:#fff; }
+.info_form .tabradio{background:#9dcee3;height:32px;}
+.info_form .tabradio a{width:150px;display:inline-block;text-align:center;border-right:1px solid #fff;padding:6px 0px;height:20px;line-height:20px;color:#323232; }
+.info_form .tabradio a:hover,.info_form .tabradio .current{background:url(/static/ui/img/houtai_img.png) 0px -114px no-repeat;color:#fff;}
+.info_form .formdiv{padding-top:15px;}
+.info_form .formdiv p{padding:5px 0px;line-height:24px; }
+.info_form .formdiv span.div,.info_form .formdiv p span{width:70px;display:inline-block;text-align:left;vertical-align:top;font-size:12px;line-height:22px;    }
+.info_form .formdiv p input,.info_form .formdiv p select{height:22px;border:1px solid #989898;color:#323232; }
+.info_form .formdiv p option{color:#323232 }
+.info_form .formdiv p .input1{width:220px;}
+.info_form .formdiv p .input2{width:300px;}
+.info_form .formdiv p .input3{width:458px;}
+.info_form .formdiv p textarea{width:454px;height:96px;border:1px solid #989898;color:#323232;resize:none;}
+.info_form .formdiv .plase .area{width:458px;border:1px solid #9f9f9f;display:inline-block; }
+.info_form .formdiv .plase .area .map{height:280px;}
+.info_form .formdiv .plase .area .info{border-top:1px solid #989898;padding:3px;}
+.info_form .formdiv .config .edit{width:458px;display:inline-block;}
+.info_form .formdiv .bj_img{padding-top:12px;}
+.info_form .formdiv .bj_img .load{width:298px;height:96px;border:1px solid #9f9f9f;display:inline-block;text-align:center;}
+.info_form .formdiv .bj_img .load .size{text-align:left;padding-top:55px;  }
+.info_form .formdiv .bj_img .logo{width:180px;height:180px;border:1px solid #9f9f9f;display:inline-block;text-align:center;}
+.info_form .formdiv .bj_img .logo .size{text-align:left;padding-top:50px;}
+.info_form .btndiv{padding-top:15px; }
+.info_form .btndiv a{display:inline-block;width:100px;height:22px;background:#00a2e5;color:#fff;text-align:center;padding:5px 0px;line-height:22px;margin-right:1px;}
+.info_form .btndiv a .cancel,.info_form .btndiv a .submit{background:url(/static/ui/img/houtai_img.png) -28px -71px no-repeat;display:inline-block;width:11px;height:11px;vertical-align:top;margin:4px 5px 0 0; }
+.info_form .btndiv a .submit{background-position:-39px -69px;width:13px;height:13px;}
+/*编辑楼盘概况 相册样式*/
+.albumCon{padding:22px 0px 22px 10px; }
+.albumCon .albums{width:236px;height:223px;float:left;position:relative;padding:20px 20px 0px 0px;}
+.albumCon .albums .face{width:234px;height:221px;border:1px solid #b8b8b8;border-radius:5px;position:absolute;margin-top:-3px;margin-left:-3px;z-index:1;background:#fff; }
+.albumCon .albums .floor{width:234px;height:221px;border:1px solid #b8b8b8;border-radius:5px; }
+.albumCon .albums .face i{background:url(/static/ui/img/houtai_img.png) -29px -43px;display:inline-block;height:24px;width:24px;}
+.albumCon .albums .face .add{display:inline-block;width:198px;height:78px;text-align:center;margin-top:49px;margin-left:20px;padding-top:50px;}
+.albumCon .albums .face .add p{padding-top:20px;}
+.albumCon .albums .face span{font-size:16px;color:#333;font-weight:bold;display:inline-block;width:196px;overflow:hidden;}
+.albumCon .albums .face .titl{padding:10px; }
+.albumCon .albums .face .titl .del{background:url(/static/ui/img/houtai_img.png) -56px -44px no-repeat;display:inline-block;width:18px;height:21px;vertical-align:top;     }
+.albumCon .albums .face .box{padding:0px 17px 11px;}
+.albumCon .albums .face .box .img{width:200px;height:130px;}
+.albumCon .albums .face .btn{padding:0px 16px;}
+.albumCon .albums .face .btn a{display:inline-block;width:100px;height:22px;padding:5px 0;text-align:center;line-height:22px;color:#fff;background:#00aaed;margin-right:1px;}
+/*编辑相册名字弹窗*/
+.lightBox .albums{padding:0 20px 20px; }
+.lightBox .albums .tips{color:#323232;font-size:16px;padding:10px;border-bottom:1px dotted #000; }
+.lightBox .albums p{padding-top:15px;}
+.lightBox .albums .btndiv{padding-top:40px;}
+.lightBox .albums .btndiv a{display:inline-block;width:100px;height:22px;padding:5px 0;text-align:center;line-height:22px;color:#fff;}
+.lightBox .albums .btndiv .sure{background:#00a332;margin-right:16px;  }
+.lightBox .albums .btndiv .cancel{background:#e02500;}
+/*编辑楼盘概况 单张照片样式*/
+.albumCon .photos{width:236px;height:223px;float:left;padding:20px 20px 0px 0px;}
+.albumCon .photos .face{width:234px;height:221px;border:1px solid #b8b8b8;border-radius:5px;background:#fff; }
+.albumCon .photos .face i{background:url(/static/ui/img/houtai_img.png) -29px -43px;display:inline-block;height:24px;width:24px;}
+.albumCon .photos .face .add{display:inline-block;width:198px;height:78px;text-align:center;margin-top:49px;margin-left:20px;padding-top:50px;}
+.albumCon .photos .face .add p{padding-top:20px;}
+.albumCon .photos .face span{font-size:16px;color:#333;font-weight:bold;display:inline-block;width:196px;}
+.albumCon .photos .face .titl{padding:10px; }
+.albumCon .photos .face .titl .del{background:url(/static/ui/img/houtai_img.png) -56px -44px no-repeat;display:inline-block;width:18px;height:21px;vertical-align:top;     }
+.albumCon .photos .face .box{padding:0px 17px 11px;}
+.albumCon .photos .face .box .img{width:200px;height:130px;}
+.albumCon .photos .face .btn{padding:0px 16px; }
+.albumCon .photos .face .btn a{display:inline-block;width:200px;height:22px;padding:5px 0;text-align:center;line-height:22px;color:#fff;background:#00aaed;}
+/*编辑楼盘概况 楼盘分析样式*/
+.ueditor{padding:20px 1px 1px;}
+/*新建楼盘*/
+.mbody .new_build{padding:32px;background:#fff;}
+.new_build .new{padding: 5px 0px;line-height: 24px;}
+.new_build span.div,.new_build .new span{width:70px;display:inline-block;text-align:left;vertical-align:top;font-size:12px;line-height:22px;    }
+.new_build .new input{height:22px;border:1px solid #989898;color:#323232; }
+.new_build .pradio{padding-bottom: 8px;}
+.new_build .new .input1{width:220px;}
+.new_build .new .input2{width:300px;}
+.new_build .btndiv{padding-top:15px;}
+.new_build .btndiv a{display:inline-block;width:100px;height:22px;background:#00a2e5;color:#fff;text-align:center;padding:5px 0px;line-height:22px;margin-right:1px;}
+.new_build .btndiv a .cancel,.new_build .btndiv a .submit{background:url(/static/ui/img/houtai_img.png) -28px -71px no-repeat;display:inline-block;width:11px;height:11px;vertical-align:top;margin:4px 5px 0 0; }
+.new_build .btndiv a .submit{background-position:-39px -69px;width:13px;height:13px;}
+/*已发布楼盘 合作楼盘*/
+.con_title .tright .area{display:inline-block;position:relative;width:160px;height:24px;background:#fff;vertical-align:top;margin: 4px 15px 4px 0px;color:#323232;line-height:24px;}
+.con_title .tright .area .list{position:absolute;left:0px;top:24px;background:#fff;width:160px;border-top:1px solid #0097d9; }
+.con_title .tright .area li{padding:2px 0px;cursor:pointer;}
+.con_title .tright .area i{display:inline-block;background:url(/static/ui/img/houtai_img.png) -98px 7px no-repeat;width:24px;height:19px;border-left:1px dotted #00a8eb;position:absolute;right:0px;top:3px;cursor:pointer;}
+/*已发布楼盘查看楼盘概况*/
+.info_form .formdiv .long{font-size:14px;}
+.info_form .formdiv .long span{vertical-align:middle;font-size:14px;}
+/*老板助手样式*/
+.mbody .listop{padding:10px 0px;height:22px;line-height:22px;font-size:14px;color:#292929;}
+.mbody .boss_form{background:#fff;padding:0px 20px 20px;  }
+.boss_form .basic_info{padding:10px 0px;height:22px;line-height:22px;font-weight:bold;font-size:14px;color:#292929; }
+.boss_form .boss_item{padding-bottom:10px; }
+.boss_form .boss_item em{display:inline-block;width:10px;color:#f00; }
+.boss_form .boss_item i{background:url(/static/ui/img/houtai_img.png) -55px -66px no-repeat;display:inline-block;height:16px;width:16px;vertical-align:top;margin:5px 0 0 5px;  }
+.boss_form .boss_item .iname{display:inline-block;width:70px;  }
+.boss_form .boss_item .input{height:22px;line-height:22px;border:1px solid #989898;width:220px; }
+.boss_form .btndiv{padding-top:15px; }
+.boss_form .btndiv a{display:inline-block;width:100px;height:22px;background:#00a2e5;color:#fff;text-align:center;padding:5px 0px;line-height:22px;margin-right:1px;}
+.boss_form .btndiv a .cancel,.boss_form .btndiv a .submit{background:url(/static/ui/img/houtai_img.png) -28px -71px no-repeat;display:inline-block;width:11px;height:11px;vertical-align:top;margin:4px 5px 0 0; }
+.boss_form .btndiv a .submit{background-position:-39px -69px;width:13px;height:13px;}
+/*惠买房推荐样式*/
+.mbody .boss_table{padding-top:1px;}
+.boss_table thead{background:#9dcee3;}
+.boss_table th {padding: 10px 0px 10px 15px;vertical-align: middle;border-right: 1px solid #f3f3ef;text-align: left;}
+.boss_table td{padding:10px 0px 10px 15px;vertical-align:middle; }
+.boss_table .odd_line td{background:#fff;}
+.boss_table td .up,.boss_table td .down{background:url(/static/ui/img/houtai_img.png) -79px -45px no-repeat;display:inline-block;width:20px;height:19px;    }
+.boss_table td .down{background-position:-103px -45px; }
+.boss_table td .upload{background:url(/static/ui/img/houtai_img.png) -128px 0px no-repeat;display:inline-block;width:110px;height:26px;line-height:26px;padding-left:10px;text-align:center;color:#fff;       }
+.boss_table td .img{width:81px;height:60px;position:relative;}
+.boss_table td .img .del{display:inline-block;background:url(/static/ui/img/houtai_img.png) -71px -65px no-repeat;width:16px;height:16px;position:absolute;top:0px;right:0px;       }
+/*消息管理样式  共用老板助手table样式，如要修改，请另写*/
+
+/*提问详情*/
+.mbody .ask_detail{padding-bottom:15px;}
+.ask_detail .list{padding-top:15px; }
+.ask_detail .list .ask{padding:7px 15px;background:#fff;border-radius:5px;}
+.ask_detail .list .ask .avatar{float:left;width:60px;height:60px;box-shadow:1px 1px 3px #9e9e9e;vertical-align:top; }
+.ask_detail .list .ask .cont{float:right;vertical-align:top;width:975px;padding-left:15px;margin-left:14px;border-left:1px dotted #616161;     }
+.ask_detail .list .ask .cont p{width:100%;line-height:20px;color:#323232;}
+.ask_detail .list .ask .cont p .name{color:#00a3e5;}
+.ask_detail .list .ask .cont p .count,.ask_detail .list .reply p .count{color:#9e9e9e;}
+.ask_detail .list .triangle{padding-left:10px;}
+.ask_detail .list .sharp{width:0px;height:0px;border-left:0px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;font-size:0px;line-height:0px;}
+.ask_detail .list .reply_list{background:#d5e8d7;margin-left:60px;}
+.ask_detail .list .reply{margin-left:50px;border-bottom:1px solid #d3d3d3;padding:5px 15px; }
+.ask_detail .list .reply p{line-height:20px;}
+.ask_detail .list .frist{margin-left:0px;}
+.ask_detail .list .last{border:0px;}
+/*新建消息推送弹出层样式   系统角色管理样式   共用*/
+.lightBox .pushtop {text-align: right;border-bottom: 1px solid #c2c2c3;padding: 8px 0px;}
+.lightBox .pushtop .close {color: #f00;font-weight: bold;margin-right: 15px;}
+.lightBox .form{padding:0px 20px 20px;}
+.lightBox .form .head{color:#323232;font-size:16px;border-bottom:1px dotted #000;padding:10px 0px;height:20px;line-height:20px;}
+.lightBox .form .item{padding:5px 0px;line-height:24px;}
+.lightBox .form .item .name{display:inline-block;width:85px;vertical-align:top; }
+.lightBox .form .item em{display:inline-block;width:10px;color:#f00; }
+.lightBox .form .item .text{height:22px;width:200px;border:1px solid #969797;line-height:22px;    }
+.lightBox .form .item textarea{border:1px solid #969797;width:335px;height:45px;resize:none;  }
+.lightBox .form .bottom{text-align:left;padding-top:10px;padding-left:95px;}
+.lightBox .form .bottom a{display:inline-block;width:85px;height:25px;line-height:25px;text-align:center;color:#fff;}
+.lightBox .form .bottom .sure{background:#00a332;margin-right:16px;  }
+.lightBox .form .bottom .cancel{background:#e02500;}
+/*添加商圈样式*/
+.sys_form{background:#fff;padding:5px 15px 15px;  }
+.sys_form .item{padding:5px 0;line-height:22px;  }
+.sys_form .item .name{display:inline-block;width:85px;  }
+.sys_form .item .text{height:22px;width:200px;border:1px solid #969797;   }
+.sys_form .item .area{border:1px solid #9f9f9f;width:458px;float:left;}
+.sys_form .item .area .map{width:458px;height:280px;}
+.sys_form .item .area .info p{line-height:22px;font-size:14px;padding:5px;   }
+.sys_form .item .area .info input{width:148px;height:22px;line-height:22px;border:1px solid #969797;   }
+.sys_form .btndiv{padding:15px 0 0 85px;}
+.sys_form .btndiv a{display:inline-block;width:100px;height:22px;background:#00a2e5;color:#fff;text-align:center;padding:5px 0px;line-height:22px;margin-right:1px;}
+.sys_form .btndiv a .cancel,.sys_form .btndiv a .submit{background:url(/static/ui/img/houtai_img.png) -28px -71px no-repeat;display:inline-block;width:11px;height:11px;vertical-align:top;margin:4px 5px 0 0; }
+.sys_form .btndiv a .submit{background-position:-39px -69px;width:13px;height:13px;}
+
+
+
+
+
+
+
+
+
+

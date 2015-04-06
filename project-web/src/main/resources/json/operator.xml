@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+	 
+	<!-- 操作员分页查询 -->
+	<item name="operatorList">
+		<param name="includeProperties">
+			operators\[\d+\]\.id,
+			operators\[\d+\]\.name,
+			operators\[\d+\]\.account,
+			operators\[\d+\]\.gender,
+			operators\[\d+\]\.gender\.value,
+			operators\[\d+\]\.gender\.desc,
+			operators\[\d+\]\.operatorStatus,
+			operators\[\d+\]\.operatorStatus\.value,
+			operators\[\d+\]\.operatorStatus\.desc,
+			operators\[\d+\]\.createTime,
+			operators\[\d+\]\.role,
+			operators\[\d+\]\.role\.id,
+			operators\[\d+\]\.role\.name,
+			operators\[\d+\]\.role\.superOperator,
+			operators\[\d+\]\.email,
+			operators\[\d+\]\.mobile,
+			operators\[\d+\]\.description,
+			pagination\.begin,
+			pagination\.pageSize,
+			pagination\.count,
+			pagination\.currentPage
+		</param>
+	</item>
+	<!-- 操作员 -->
+	<item name="operator">
+		<param name="includeProperties">
+			id,
+			name,
+			account,
+            gender,
+            gender\.value,
+            gender\.desc,
+            mobile,
+            email,
+            description,
+		    role\.id,
+			role\.name,
+            role\.superOperator
+		</param>
+		<param name="ignoreHierarchy">false</param>
+	</item>
+</json>

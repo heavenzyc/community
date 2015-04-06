@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+	<item name="roleList">
+		<param name="includeProperties">
+            data\[\d+\]\.id,
+            data\[\d+\]\.name,
+            data\[\d+\]\.description,
+            data\[\d+\]\.roleResources,
+            data\[\d+\]\.superOperator,
+            data\[\d+\]\.roleStatus,
+            data\[\d+\]\.roleStatus\.value,
+            data\[\d+\]\.roleStatus\.desc,
+            data\[\d+\]\.roleResources\[\d+\]\.resource\.id,
+            data\[\d+\]\.roleResources\[\d+\]\.resource\.name,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+		</param>
+	</item>
+	<item name="role">
+		<param name="includeProperties">
+			id,
+			name,
+			description,
+            superOperator,
+			roleResources\[\d+\]\.resource\.id,
+			roleResources\[\d+\]\.resource\.name
+		</param>
+	</item>
+</json>

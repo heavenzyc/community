@@ -1,0 +1,196 @@
+
+<div class="add-dialog" id="addOperatorDialog">
+	<form method="post">
+        <input type="hidden" name="_method" value="put">
+
+		<div class="dialog-main">
+			<div class="area-row">
+				<label  class="label-fl"><em class="required">*</em> 姓名</label>
+				<span class="area-cell"> 
+					<input type="text" name="name"  class="input-txt easyui-validatebox"  data-options="required:true,validType:'length[2,8]'"/>
+				</span>
+				<div class="clear"></div>
+			</div>
+            <div class="area-row">
+                <label  class="label-fl"><em class="required">&nbsp;&nbsp;</em>性别</label>
+				<span class="area-cell">
+					<input type="radio" name="gender" value="MAN" class="input-chk" checked='checked'/>男
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="WOMAN" class="input-chk"/>女
+				</span>
+                <div class="clear"></div>
+            </div>
+			<div class="area-row">
+				<label  class="label-fl"><em class="required">*</em> 登录账户：</label>
+				<span class="area-cell"> 
+					<input type="text" name="account" id="add_account" onblur="checkAccountUnique()" class="input-txt easyui-validatebox"  data-options="required:true,validType:'length[6,15]'"/>
+				</span>
+                &nbsp;<span id="accountUnique" style="color: red"></span>
+				<div class="clear"></div>
+			</div>
+			<div class="area-row">
+				<label  class="label-fl"><em class="required">*</em> 账户密码：</label>
+				<span class="area-cell"> 
+					<input id="password" name="password" type="password" class="input-txt easyui-validatebox" 
+					data-options="required:true,validType:'length[6,15]'"/>
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="area-row">
+				<label class="label-fl"><em class="required">*</em> 确认密码：</label>
+				<span class="area-cell"> 
+					<input id="repassword" type="password" class="input-txt easyui-validatebox" 
+					required="required" validType="equals['#password']" />
+				</span>
+				<div class="clear"></div>
+			</div>
+            <div class="area-row">
+                <label  class="label-fl"><em class="required">&nbsp;&nbsp;</em>电话：</label>
+				<span class="area-cell">
+					<input type="text" name="mobile" class="input-txt easyui-validatebox" data-options="validType:'mobile'"/>
+				</span>
+                <div class="clear"></div>
+            </div>
+            <div class="area-row">
+                <label  class="label-fl"><em class="required">&nbsp;&nbsp;</em>邮箱：</label>
+				<span class="area-cell">
+					<input type="text" name="email" class="input-txt easyui-validatebox"  data-options="validType:'email'"/>
+				</span>
+                <div class="clear"></div>
+            </div>
+			<div class="area-row">
+                <label class="label-fl"><em class="required">*</em> 角色：</label>
+				<span class="area-cell">
+					<input type="text" name="role" id="roles" class="input-txt easyui-combobox" data-options="required:true"/>
+				</span>
+				<div class="clear"></div>
+			</div>
+            <div class="area-row">
+                <label class="label-fl"><em class="required">&nbsp;&nbsp;</em>描述：</label>
+				<span class="area-cell">
+                    <textarea name="description" id="description" cols="40" maxlength="200" placeholder="200字以内"></textarea>
+				</span>
+                <div class="clear"></div>
+            </div>
+			 
+		</div>
+		<div id="operatorButton" style="text-align: center;">
+			<a href="javascript:void(0);" id="saveBtn" class="easyui-linkbutton">保存</a>
+			<a href="javascript:void(0);" id="cancelBtn" class="easyui-linkbutton">关闭</a>
+		</div>
+		<div id="errorMsg" style="padding: 10px;color:#FF0000; font-size:20px;">
+					 
+		</div>
+	</form>
+</div>
+ 
+
+<div class="add-dialog" id="editOperatorDiv">
+	<form  method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="id" id="edit_id" value="">
+		<div class="dialog-main">
+			 <table class="table-layout">
+				<tr>
+					<td>姓名：</td>
+					<td>
+						<input id="edit_name" class="input-txt easyui-validatebox" name="name" data-options="required:true,validType:'length[2,8]'"/>
+					</td>
+				</tr>
+                 <tr>
+                     <td>性别：</td>
+                     <td>
+                         <input id="man" type="radio" name="gender" value="MAN" class="input-chk" />男&nbsp;&nbsp;&nbsp;&nbsp;
+                         <input id="woman" type="radio" name="gender" value="WOMAN" class="input-chk"/>女
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>电话：</td>
+                     <td>
+                         <input type="text" id="edit_mobile" name="mobile" class="input-txt easyui-validatebox" data-options="validType:'mobile'"/>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>邮箱：</td>
+                     <td>
+                         <input type="text" id="edit_email" name="email" class="input-txt easyui-validatebox"  data-options="validType:'email'"/>
+                     </td>
+                 </tr>
+				<tr>
+					<td>角色：</td>
+					<td>
+						<input id="edit_roles"  class="input-txt easyui-combobox" name="roles" style="width: 155px;"/>
+					</td>
+				</tr>
+                 <tr>
+                     <td>描述：</td>
+                     <td>
+                         <textarea name="description" id="edit_description" cols="40" maxlength="200" placeholder="200字以内"></textarea>
+                     </td>
+                 </tr>
+
+			</table>
+		</div>
+		<div id="edit_operatorButton" style="text-align: center;">
+			<a href="javascript:void(0);" id="edit_saveBtn" class="easyui-linkbutton">保存</a>
+			<a href="javascript:void(0);" id="edit_cancelBtn" class="easyui-linkbutton">取消</a>
+		</div>
+		<div id="errorMsg" style="text-align: center;padding: 10px;color:#FF0000; font-size:20px;">
+					 
+		</div>
+	</form>
+</div>
+
+
+ <div class="add-dialog" id=modifyPasswordDiv>
+	<form  method="post">
+		<input type="hidden" name="_method" value="put">
+		<div class="dialog-main">
+			 <table class="table-layout">
+			 	<tr>
+					<td>帐号：</td>
+					<td>
+						<div id="account"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>姓名：</td>
+					<td>
+						<input id="name" class="easyui-validatebox" name="name" 
+						data-options="required:true,validType:'length[2,8]'"/>
+					</td>
+				</tr>
+				<tr>
+					<td>旧 密 码：</td>
+					<td>
+						<input id="oldPass" name="oldPass" type="password" class="easyui-validatebox" 
+					data-options="required:true,validType:'length[6,15]'"/>
+					</td>
+				</tr>
+				<tr>
+					<td>新密 码：</td>
+					<td>
+						<input id="newPass" name="newPass" type="password" class="easyui-validatebox" 
+					data-options="required:true,validType:'length[6,15]'"/>
+					</td>
+				</tr>
+				<tr>
+					<td>新密 码：</td>
+					<td>
+						<input  type="password" class="easyui-validatebox" 
+					required="required" validType="equals['newPass']" />
+					</td>
+				</tr>
+				
+				
+			</table>
+		</div>
+		<div id="operatorButton" style="text-align: center;">
+			<a href="javascript:void(0);" id="pas_saveBtn" class="easyui-linkbutton">保存</a>
+			<a href="javascript:void(0);" id="pas_cancelBtn" class="easyui-linkbutton">关闭</a>
+		</div>
+		<div id="errorMsg" style="text-align: center;padding: 10px;color:#FF0000; font-size:20px;">
+					 
+		</div>
+	</form>
+</div>
+ 

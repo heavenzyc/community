@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 主题分页查询 -->
+    <item name="estateMessageList">
+        <param name="includeProperties">
+            data\[\d+\]\.id,
+            data\[\d+\]\.updateAt,
+            data\[\d+\]\.createAt,
+            data\[\d+\]\.title,
+            data\[\d+\]\.contents,
+            data\[\d+\]\.beginTime,
+            data\[\d+\]\.endTime,
+            data\[\d+\]\.operator,
+            data\[\d+\]\.operator.name,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>

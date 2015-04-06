@@ -1,0 +1,77 @@
+  
+ <div class="add-dialog" id="addRoleDiv">
+	<form  method="post">
+		 
+		<div class="dialog-main">
+			 <table class="table-layout">
+				<tr >
+					<td>角色名称：</td>
+					<td>
+						<input class="easyui-validatebox" onblur="checkNameUnique()" id="add_name"  name="name"
+                               data-options="required:true,validType:'length[2,10]'"/><br>
+                        <span id='uniqueTips' style="color: red"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>角色描述：</td>
+					<td>
+						<input  class="easyui-validatebox"  name="description" data-options="validType:'length[2,10]'"/>
+					</td>
+				</tr>
+				<tr>
+					<td>角色权限：</td>
+					<td>
+						<input id="resources"  class="easyui-combobox" name="resources"  data-options="required:true"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="operatorButton" style="text-align: center;">
+			<a href="javascript:void(0);" id="saveBtn" class="easyui-linkbutton">保存</a>
+			<a href="javascript:void(0);" id="cancelBtn" class="easyui-linkbutton">关闭</a>
+		</div>
+		<div id="errorMsg" style="text-align: center;padding: 10px;color:#FF0000; font-size:20px;">
+					 
+		</div>
+	</form>
+</div>
+
+
+ <div class="add-dialog" id="editRoleDiv">
+	<form  method="post">
+		 <!--<input type="hidden" name="_method" value="put">-->
+		<div class="dialog-main">
+			 <table class="table-layout">
+				<tr>
+					<td>角色名称：</td>
+					<td>
+						<input class="easyui-validatebox" onblur="checkEditNameUnique()"  data-options="required:true,validType:'length[2,10]'" id="name" name="name"/><br>
+                        <span id='uniqueEditTips' style="color: red"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>角色描述：</td>
+					<td>
+						 
+						<input  class="easyui-validatebox" id="description" name="description" data-options="validType:'length[2,10]'"/>
+					</td>
+				</tr>
+				<tr>
+					<td>角色权限：</td>
+					<td>
+						<input id="edit_resources"  class="easyui-combobox" name="resources"  data-options="required:true" style="width: 155px;"/>
+						 
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="edit_operatorButton" style="text-align: center;">
+			<a href="javascript:void(0);" id="edit_saveBtn" class="easyui-linkbutton">保存</a>
+			<a href="javascript:void(0);" id="edit_cancelBtn" class="easyui-linkbutton">关闭</a>
+		</div>
+		<div id="edit_errorMsg" style="text-align: center;padding: 10px;color:#FF0000; font-size:20px;">
+					 
+		</div>
+	</form>
+</div>
+ 

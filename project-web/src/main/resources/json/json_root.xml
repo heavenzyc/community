@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <import resource="/json/user.xml"/>
+    <import resource="/json/operator.xml"/>
+    <import resource="/json/role.xml"/>
+</json>

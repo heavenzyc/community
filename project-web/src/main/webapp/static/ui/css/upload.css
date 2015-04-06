@@ -1,0 +1,69 @@
+.upload-pic-box {text-align: center;position: relative;display:inline-block;}
+.upload-pic-box .icon-clearpic{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 25px;
+    height: 26px;
+    cursor: pointer;
+    background: url(../img/upload_icon_btn.png) 2px -48px no-repeat;
+    z-index: 10;
+}
+.validate-error{color:red;}
+.upload-pic-btn{display: inline;width: 200px;height: 130px;background: url(../img/uploadImg.png) no-repeat center center;cursor: pointer;overflow: hidden;position: relative;float: left}
+.upload-pic-wh{display: inline-block;background: url(../img/upload_pic_wh.png) no-repeat;cursor: pointer;overflow: hidden;width: 120px;height: 120px;}
+.upload-pic-btn img{width:100%;height: 100%;position: relative;z-index: 3}
+.upload-pic-box .txt{font-style:normal;color: #888;display: inline-block;position:absolute;left:0;top:65%;z-index: 2;width: 100%;text-align: center}
+.Left{float:left;}
+.Right{float:right;}
+.upload-pic{display: inline-block; /*background: url(../img/upload_pic.png) center center no-repeat;*/ position: relative;border: 1px solid #ccc;}
+.upload-pic-140-70{display:inline-block;width:140px;height:70px;background:url("../img/upload_pic_140.jpg") center center no-repeat;  }
+.upload-pic-140-70 img{width:100%;height:100%;}
+.upload-pic-720-400{display:inline-block;width:340px;height:190px;background:url("../img/upload_pic_720_400.jpg") center center no-repeat;  }
+.upload-pic-720-400 img{width:100%;height:100%;}
+.upload-pic-180-180{display:inline-block;width:180px;height:180px;background:url("../img/upload_pic_180_180.png") center center no-repeat;  }
+.upload-pic-180-180 img{width:100%;height:100%;}
+.uploadImageDialogBase{width:100%;position:fixed;top:110px;_position:absolute;_top:expression(eval(document.documentElement.scrollTop + 90));z-index:10000 }
+.uploadImageDialogBase .in{width:600px;background:#fff;margin:0px auto;border:1px solid #bbb;font-family:"微软雅黑"; }
+.uploadImageDialogBase .boxtop{height:38px;border-bottom:1px solid #d5d5d5;background: -moz-linear-gradient(top,#ffffff,#e7e8e8);background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#e7e8e8));filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e7e8e8',GradientType='0');line-height:38px;padding:0 20px;}
+.uploadImageDialogBase .boxtop strong{color:#373b3e;font-size:14px;}
+.uploadImageDialogBase .boxtop .close{color:#373b3e;text-decoration:none;font-size:18px;   }
+.uploadImageDialogBase .cotent{background:#f7f7f7;padding:18px 25px;}
+.uploadImageDialogBase .cotent .files_tips{color:#c00;font-size:12px;line-height:22px; }
+.uploadImageDialogBase .cotent .files_nav input{ vertical-align:middle; margin:0; padding:0}
+.uploadImageDialogBase .cotent .files_nav .file-box{position:relative;width:140px;display:inline-block;height:28px;*margin-right:5px;_margin-right:5px }
+.uploadImageDialogBase .cotent .files_nav .btn{ background:#f2f2f2; border:1px solid #c3c7c8;width:140px;height:28px;line-height:28px;border-radius:3px;font-size:14px;cursor:pointer;text-align:center;}
+.uploadImageDialogBase .cotent .files_nav .file{display:none; }
+.uploadImageDialogBase .cotent .files_nav span{color:#373b3e;font-size:14px;}
+.uploadImageDialogBase .cotent .limgbox{float:left;width:335px;}
+.uploadImageDialogBase .cotent .tips{color:#373b3e;font-size:14px;line-height:40px; }
+.uploadImageDialogBase .cotent .limgbox .bigimg{width:333px;height:228px;border:1px solid #c3c7c8;background:#f1f1f1;text-align:center;}
+.uploadImageDialogBase  .cropImgArea .img{max-width: 100%; max-height: 100%;}
+.uploadImageDialogBase .previewImgArea{width: 550px;}
+.uploadImageDialogBase  .previewImg .img{max-width: 100%; max-height: 100%;}
+.uploadImageDialogBase  .cropImgArea .img{width: 100%\9;}
+
+.uploadImageDialogBase .cotent .rimgbox{float:right;width:191px;}
+.uploadImageDialogBase .cotent .rimgbox .milimg{width:189px;height:96px;background:#f7f7f7;border:1px solid #c3c7c8;margin-bottom:31px; text-align:center;}
+.uploadImageDialogBase .cotent .rimgbox .smalimg{width:114px;height:58px;border:1px solid #c3c7c8;background:#f7f7f7;text-align:center;}
+.uploadImageDialogBase .box_bottom{padding-top:20px;}
+.uploadImageDialogBase .cropImg{margin: 0 auto; display: inline-block;height: 100%;}
+.uploadImageDialogBase .box_bottom a{display: inline-block;width: 146px;height: 38px;color: #fff;line-height:38px;text-align: center;outline: none;font-size: 14px;cursor:pointer;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.uploadImageDialogBase .box_bottom .blueBut{background:#4ea93c;}
+.uploadImageDialogBase .box_bottom .blueBut:hover{background:-moz-linear-gradient(top,#6dc85b,#2f8c1d);background: -webkit-gradient(linear,left top,left bottom,from(#6dc85b),to(#2f8c1d));filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6dc85b',endColorstr='#2f8c1d',GradientType='0');}
+.uploadImageDialogBase .box_bottom .greyBut{background:#8a8b8d;}
+.uploadImageDialogBase .box_bottom .greyBut:hover{background:-moz-linear-gradient(top,#8a8b8d,#636161);background: -webkit-gradient(linear,left top,left bottom,from(#8a8b8d),to(#636161));filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8a8b8d',endColorstr='#636161',GradientType='0');}
+.uploadImageDialogBase .previewImg{overflow: hidden;}
+.uploadImageDialogBase .preview-img img{max-width:100%; max-height:100%;}
+
+
+/* Fixes issue here http://code.google.com/p/jcrop/issues/detail?id=1 */
+.jcrop-holder{text-align:left;}
+.jcrop-vline, .jcrop-hline{font-size:0;	position:absolute; background:white url('Jcrop.gif') top left repeat;}
+.jcrop-vline{height:100%; width:1px !important;}
+.jcrop-hline{width:100%; height:1px !important;}
+.jcrop-handle{font-size:1px; width:7px !important; height:7px !important;	border:1px #eee solid; background-color:#333; *width:9px; *height:9px;}
+.jcrop-tracker{width:100%; height:100%;}
+.custom .jcrop-vline,.custom .jcrop-hline{background:yellow;}
+.custom .jcrop-handle{border-color:black; background-color:#C7BB00; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.upload-pic-640{width:140px;height:70px; }

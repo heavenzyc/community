@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+	<item name="data">
+		<param name="includeProperties">
+            users\[\d+\]\.id,
+            users\[\d+\]\.name,
+            users\[\d+\]\.age,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+		</param>
+	</item>
+</json>

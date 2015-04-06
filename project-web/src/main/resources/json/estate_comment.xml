@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 主题分页查询 -->
+    <item name="estateCommentList">
+        <param name="includeProperties">
+            data\[\d+\]\.\w+,
+            data\[\d+\]\.building\.name,
+            data\[\d+\]\.user\.nickname,
+            <!--data\[\d+\]\.status\.desc,-->
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+
+    <item name="commonCommentList">
+        <param name="includeProperties">
+            data\[\d+\]\.\w+,
+            data\[\d+\]\.building\.name,
+            data\[\d+\]\.user\.nickname,
+            data\[\d+\]\.commonCommentType\.desc,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+
+    <item name="estateCommentDtoList">
+        <param name="includeProperties">
+            data\[\d+\]\.\w+,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>

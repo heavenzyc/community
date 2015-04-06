@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 主题分页查询 -->
+    <item name="questionList">
+        <param name="includeProperties">
+            data\[\d+\]\.\w+,
+            data\[\d+\]\.building\.name,
+            data\[\d+\]\.questionUser\.nickname,
+            <!--data\[\d+\]\.status\.desc,-->
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>

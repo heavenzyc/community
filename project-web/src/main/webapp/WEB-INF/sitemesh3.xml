@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sitemesh>
+    <mapping path="*" decorator="/WEB-INF/jsp/se/index.jsp"/>
+    <mapping path="/se/login.htm" exclue="true"/>
+    <!--<mapping path="/login" exclue="true"/>
+    <mapping path="/index" exclue="true"/>-->
+</sitemesh>

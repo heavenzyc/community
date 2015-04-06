@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 操作员分页查询 -->
+    <item name="commentList">
+        <param name="includeProperties">
+            info\[\d+\]\.\w+,
+            info\[\d+\]\.merchant\.name,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+
+    <item name="comment">
+        <param name="includeProperties">
+            \w+,
+            user\.\w+,
+            merchant\.\w+,
+            merchant\.oldLogUrlPath,
+            impressTag\.\w+
+        </param>
+    </item>
+</json>

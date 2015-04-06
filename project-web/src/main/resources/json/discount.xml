@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+	<item name="discountList">
+		<param name="includeProperties">
+            discounts\[\d+\]\.id,
+            discounts\[\d+\]\.title,
+            discounts\[\d+\]\.content,
+            discounts\[\d+\]\.bookCount,
+            discounts\[\d+\]\.bookUnit,
+            discounts\[\d+\]\.startDate,
+            discounts\[\d+\]\.endDate,
+            discounts\[\d+\]\.createDate,
+            discounts\[\d+\]\.status,
+            discounts\[\d+\]\.status\._name,
+            discounts\[\d+\]\.status\.desc,
+            discounts\[\d+\]\.discountPictures,
+            discounts\[\d+\]\.discountPictures\[\d+\]\.picUrlPath,
+            discounts\[\d+\]\.discountPictures\[\d+\]\.name,
+
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+		</param>
+	</item>
+
+    <item name="discountSignal">
+        <param name="includeProperties">
+            id,
+            title,
+            content,
+            bookCount,
+            bookUnit,
+            startDate,
+            endDate,
+            createDate,
+            status,
+            status\._name,
+            status\.desc,
+            discountPictures,
+            discountPictures\[\d+\]\.picUrlPath,
+            discountPictures\[\d+\]\.id,
+            discountPictures\[\d+\]\.name
+        </param>
+    </item>
+</json>

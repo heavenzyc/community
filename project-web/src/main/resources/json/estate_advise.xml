@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 主题分页查询 -->
+    <item name="estateAdviseList">
+        <param name="includeProperties">
+            data\[\d+\]\.\w+,
+            data\[\d+\]\.user\.nickname,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>

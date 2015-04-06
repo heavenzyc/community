@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json>
+    <!-- 主题分页查询 -->
+    <item name="subjectList">
+        <param name="includeProperties">
+            info\[\d+\]\.\w+,
+            info\[\d+\]\.status\.desc,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+
+    <!-- 主题详细信息 -->
+    <item name="subject">
+        <param name="includeProperties">
+            \w+,
+            merchant\.name,
+            user.nickname,
+            commentPictures\[\d+\]\.picUrlPath,
+            impressTag\.name
+        </param>
+        <param name="ignoreHierarchy">false</param>
+    </item>
+
+    <item name="merchantSubjectList">
+        <param name="includeProperties">
+            info\[\d+\]\.\w+,
+            info\[\d+\]\.merchant\.id,
+            info\[\d+\]\.merchant\.name,
+            info\[\d+\]\.picture.path,
+            info\[\d+\]\.picture.picUrlPath,
+            pagination\.begin,
+            pagination\.pageSize,
+            pagination\.count,
+            pagination\.currentPage
+        </param>
+    </item>
+</json>
